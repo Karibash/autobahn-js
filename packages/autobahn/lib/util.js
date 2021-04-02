@@ -442,11 +442,11 @@ let promise = function(d) {
    }
 };
 
-let sleep = async function sleep (ms) {
+let sleep = function sleep (ms) {
    return new Promise(resolve => setTimeout(resolve, ms));
 };
 
-let _read_file = async function read_file (path) {
+let _read_file = function read_file (path) {
    return new Promise((resolve, reject) => {
       fs.readFile(path, function (err, data) {
          if (err) {
